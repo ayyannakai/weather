@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    color: white;   
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    width: 40vw;
+    height: 80vh;
+    background-image: linear-gradient(pink(50%),green(50%));
+    border: 2px solid white;
+    border-radius: 30px;
+    background-color: rgb(61, 61, 61);
+}
+.search{
+    width: 40vw;
+    height: 10vh;
+    /* border: 2px solid pink; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+    position: relative;
+    top: 5vh;
+}
+
+
+.search input{
+    width: 20vw;
+    height: 7vh;
+    border: none;
+    border-radius: 20px;
+    padding: 0px 15px;
+    
+    font-size: 1.3vw;
+    outline: none;
+}
+
+.search svg{
+    width: 3vw;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.search svg:hover{
+    transform: scale(1.14);
+}
+
+.info{
+    width: 40vw;
+    height: 40vh;
+    /* border: 2px solid orange; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 5vh;
+}
+
+.info img{
+    width: 20vh;
+}
+
+.temp,.city{
+    font-size: 4vw;
+}
+
+.details{
+    width: 40vw;
+    height: 20vh;
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 8vh;
+    
+}
+
+.humidity,.wind{
+    width: 20vw;
+    height: 20vh;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+    
+}
+
+.humidity img ,.wind img{
+    width: 9vh;
+}
+.speed,.heading,.percent{
+    font-size: 1.7vw;
+}
+
+@media only screen and (max-width:400px){
+    body{
+    background-color: rgb(61, 61, 61);
+        
+    }
+    .container{
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0px;
+
+    }
+    .search{
+        width: 100vw;
+        margin: auto;
+        gap: 3vh;
+        top: 20vw;
+        
+    }
+
+    .search input{
+    
+        width: 60vw;
+        font-size: 4vw;
+        height: 6vh;
+    }
+    .search svg{
+        width: 9vw;
+    }
+    .info{
+        width: 100vw;
+        top: 30vw;
+        
+        
+    }
+    .info img{
+        width: 50vw;
+    }
+    .city,.temp{
+        font-size: 15vw;
+    }
+    .details{
+        width: 100vw;
+        top: 40vw;
+    }
+    .humidity,.wind{
+        width: 50vw;
+    }
+    .humidity img,.wind img{
+        width: 15vw;
+    }
+    .speed,.percent,.heading{
+        font-size: 4vw;
+
+    }
+}
