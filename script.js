@@ -10,6 +10,7 @@ async function getWeather(city){
     if (response.status == 404){
         
         document.querySelector('.city').innerText = 'invalid city'
+        document.querySelector('.temp').innerText = '---'
         throw new Error('invalid city name');
 
     }else{
