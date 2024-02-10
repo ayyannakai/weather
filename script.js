@@ -7,12 +7,21 @@ const input = document.querySelector('.search input')
 async function getWeather(city){
     
     let response = await fetch(API_URL + city + `&appid=${URL_KEY}`)
-    if (response.status == 404){
+    if (response.status == 404 && input.value != 'abdullah ka dil'){
         
         document.querySelector('.city').innerText = 'invalid city'
-        document.querySelector('.temp').innerText = '---'
         throw new Error('invalid city name');
+        
+        
+    }else if (response.status == 404 && input.value == 'abdullah ka dil'){{
 
+        
+            document.querySelector('.city').innerText = 'dil banjar abdullah kanjar'
+            document.querySelector('.city').style.textAlign = 'center'
+            
+    }
+
+        
     }else{
         let data = await response.json()
         
