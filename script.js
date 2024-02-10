@@ -13,10 +13,10 @@ async function getWeather(city){
         throw new Error('invalid city name');
         
         
-    }else if (response.status == 404 && input.value == 'haniya saad'){{
+    }else if (response.status == 404 && input.value == 'abdullah ka dil'){{
 
         
-            document.querySelector('.city').innerText = 'dil banjar abdullah kanjar'
+            document.querySelector('.city').innerText = 'haniya saad'
             document.querySelector('.city').style.textAlign = 'center'
             
     }
